@@ -1,0 +1,26 @@
+#include <iostream>
+#include <set>
+
+#include<vector>
+using namespace std;
+int main() {
+    // Write C++ code here
+    string in;
+    getline(std::cin, in);
+   
+    set<char> charSet;
+    for (char c : in) {
+            charSet.insert(c);
+        }
+    if(charSet.size()<3){
+        cout<<0;
+    }
+    else if(charSet.size()==3){
+        cout<<1;
+    }
+    else{
+        cout<<charSet.size()-4<<"\n";
+    }
+    
+    return 0;
+}
